@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/down.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+    <title>ios应用下载页</title>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <img class="bg" src="images/bg.jpg">
+            <img class="logo" src="images/logo.png">
+            <a class="itdown disnone" href="itms-services://?action=download-manifest&url=https://dn-tecroll.qbox.me/v2.plist">下载并安装智树App</a>
+        </div>
+        <div id="main1">
+            <p>如您已升级至IOS9，安装完成后:</p>
+            <p>1.请打开"设置"-"通用"-"描述文件";</p>
+            <p>2.找到Shenzhen LanbidTechnolog";</p>
+            <p>3.点击"信任"即可。</p>
+        </div>
+        <div id="mask" class="disnone"></div>
+        <div id="step1" class="disnone">
+            <p>如您已升级至IOS9，安装完成后:</p>
+            <p>1.请打开"设置"-"通用"-"描述文件";</p>
+            <p>2.找到Shenzhen LanbidTechnolog";</p>
+            <p>3.点击"信任"即可。</p>
+            <a class="next" href="javascript:">下一步</a>
+        </div>
+        <div id="step2" class="disnone">
+            <img class="pointer" src="images/pointer.png">
+        </div>
+        <div id="page" class="disnone">
+            <p>1.点击右上角按钮</p>
+            <p>2.选择"在Safari打开"</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var mask_time = true;
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {         //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    function exchange () {
+        //判断是否是移动设备打开。browser代码在下面
+        if (browser.versions.mobile) {
+            var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+            if (ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/QQ\//i) == "qq/") {
+                $("#step1").show();
+                $("#mask").show();
+                $("#main1").hide();
+                $("#mask, #step1").on("touchstart",function(){
+                    if (mask_time == true) {
+                        $("#step1").hide();
+                        $("#step2").show();
+                        $("#page").show();
+                        $("#main1").show();
+                        mask_time == false;
+                    }
+                });
+            } else {
+                $(".itdown").show();
+                $("#step1").hide();
+                $("#mask").hide();
+            }
+        }
+    }
+    exchange();
+    </script>
+</body>
+</html>

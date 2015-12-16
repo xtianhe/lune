@@ -1,0 +1,176 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#container {
+  min-width: 320px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.picture {
+  width: 100%;
+  height: 16rem;
+}
+
+.fs_name {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.fs_pn {
+  position: relative;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+}
+
+.fs_point {
+  color: #dd2727;
+}
+
+.fs_number {
+  position: absolute;
+  right: 1rem;
+  color: #666;
+}
+
+.fs_origin {
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.ebe {
+  background-color: #ebebeb;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 20px 0;
+}
+.ebe span {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  color: #666;
+}
+
+.change_rule {
+  margin: 0 1rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.inform {
+  margin: 0 1rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.ol_style {
+  list-style-type: decimal;
+}
+.ol_style li {
+  margin-left: 2rem;
+}
+
+.buy {
+  height: 4rem;
+  background-color: #fcfcfc;
+  margin: 20px 0 10px;
+}
+
+.lf_buy {
+  width: 60%;
+  display: inline-block;
+  height: 4rem;
+  margin-left: 1rem;
+  line-height: 2rem;
+  color: #666;
+}
+
+.rt_buy {
+  height: 4rem;
+  line-height: 4rem;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.single_price {
+  font-size: 1.5rem;
+  color: #dd2727;
+}
+
+.exchange {
+  font-size: 1.5rem;
+  color: #fff;
+  width: 9rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #dd2727;
+}
+
+.bccdcdcd {
+  background-color: #cdcdcd;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 346px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 352px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 560px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 24px;
+  }
+}

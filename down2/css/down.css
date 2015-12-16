@@ -1,0 +1,171 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.disnone {
+  display: none;
+}
+
+#container {
+  position: relative;
+}
+
+#main {
+  position: relative;
+  text-align: center;
+  height: 20rem;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: 3rem;
+  width: 9rem;
+  height: 9rem;
+  left: 50%;
+  margin-left: -4.5rem;
+}
+
+.itdown {
+  position: absolute;
+  top: 30rem;
+  width: 13rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  left: 50%;
+  margin-left: -6.5rem;
+  background-color: #0069D4;
+}
+
+#main1 {
+  position: absolute;
+  width: 21rem;
+  left: 50%;
+  margin: 1rem 0 0 -10.5rem;
+  font-size: 1.2rem;
+  color: #414141;
+  line-height: 2rem;
+}
+
+#mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 9;
+  background-color: #000;
+}
+
+#step1 {
+  position: absolute;
+  top: 20rem;
+  width: 21rem;
+  left: 50%;
+  margin: 1rem 0 0 -10.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 2rem;
+  z-index: 10;
+  text-align: center;
+}
+#step1 p {
+  text-align: left;
+}
+
+.next {
+  width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  background-color: #0069D4;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#step2 {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  z-index: 10;
+}
+
+.pointer {
+  position: absolute;
+  width: 10rem;
+  height: 10.5rem;
+  right: 0;
+}
+
+.pr {
+  position: relative;
+}
+
+#page {
+  position: absolute;
+  color: #fff;
+  top: 9rem;
+  font-size: 1.5rem;
+  width: 22rem;
+  left: 3rem;
+  z-index: 10;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 346px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 352px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 560px) {
+  html {
+    font-size: 21px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 24px;
+  }
+}

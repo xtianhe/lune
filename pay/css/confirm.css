@@ -1,0 +1,156 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+  background-color: #EBEBEB;
+  font-size: 16px;
+}
+
+.disnone {
+  display: none;
+}
+
+#container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+}
+
+#section1 {
+  position: relative;
+  width: 91.66667%;
+  margin: 10px auto;
+}
+
+.wraper {
+  width: 100%;
+  padding: 4px 0 8px;
+}
+.wraper input {
+  width: 92%;
+  display: block;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #D3D3D3;
+  line-height: 27px;
+  font-size: 1em;
+  font-family: "微软雅黑";
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.wraper span {
+  width: 50%;
+  display: inline-block;
+  color: #838383;
+  margin: 5px auto 5px 0px;
+  font-family: "微软雅黑";
+}
+.wraper textarea {
+  width: 92%;
+  display: block;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #D3D3D3;
+  line-height: 27px;
+  font-size: 1em;
+  font-family: "微软雅黑";
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.wraper_border {
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.tag {
+  width: 100%;
+}
+
+.w_sp {
+  width: 30%;
+  display: inline-block;
+  color: #838383;
+  margin: 5px auto 5px 0px;
+}
+
+#decrease {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 5px 0px -10px;
+  line-height: 21px;
+  cursor: pointer;
+  float: right;
+}
+
+#increase {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 5px 0px -10px;
+  line-height: 21px;
+  cursor: pointer;
+  float: right;
+}
+
+#num {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  float: right;
+  top: 4px;
+  text-align: center;
+}
+
+#delivery {
+  width: 10%;
+  position: relative;
+  float: right;
+}
+
+#delivery_tag {
+  position: relative;
+  width: 55px;
+  height: 28px;
+  display: inline-block;
+  margin: 5px 0px 0px;
+  float: right;
+}
+
+#section2 {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#total {
+  width: 55%;
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 5%;
+  color: #D05F5F;
+}
+
+#payit {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 39.02778%;
+  max-width: 500px;
+  float: right;
+  vertical-align: middle;
+}
+#payit img {
+  width: 100%;
+  vertical-align: bottom;
+}

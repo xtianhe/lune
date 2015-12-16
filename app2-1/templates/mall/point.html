@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/mall/point.css">
+    <title>商城</title>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <img class="picture" src="/static/images/goods_detail.jpg">
+            <p class="fs_name">同鹿随身路由</p>
+            <p class="fs_pn">
+                <span class="fs_point">5000积分</span>
+                <span class="fs_number">数量100个</span>
+            </p>
+            <p class="fs_origin">
+                <del class="origin">价值920元</del>
+            </p>
+            <!-- <p class="ebe">
+                <span>兑换规则</span>
+            </p>
+            <div class="change_rule">
+                <ol class="ol_style">
+                    <li>科学家一直都很清楚恐惧会影响我们的生活</li>
+                    <li>形容词一般放在所修饰名词的前面是英语中的一条规律</li>
+                </ol>
+            </div>
+            <p class="ebe">
+                <span>产品详情介绍</span>
+            </p>
+            <div class="inform">
+                <ol class="ol_style">
+                    <li>员工可以创建一个具有一系列不同规则的社区。</li>
+                    <li>一条重要的原则就是每次坐飞机都要多喝水</li>
+                    <li>周末工作不幸已经成为了一种普遍情况</li>
+                </ol>
+            </div> -->
+            <div class="buy">
+                <span class="lf_buy">
+                    <p>单价<span class="single_price">5000积分</span></p>
+                    <p>30人已购买（当前库存<span id="stock">100</span>）</p>
+                </span>
+                <div class="rt_buy">
+                    {% if point.point < 5000 %}
+                        <a class="exchange bccdcdcd" href="javascript:">积分不足</a>
+                    {% else %}
+                        <a class="exchange" href="javascript:">我要兑换</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+</html>

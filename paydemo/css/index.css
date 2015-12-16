@@ -1,0 +1,21 @@
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+}
+
+#main2 span {
+  display: block;
+}
+
+#main3 {
+  position: fixed;
+  bottom: 0px;
+}
+
+#buy {
+  width: 147px;
+  height: 46px;
+  display: block;
+  background: url("../images/btn1.jpg") no-repeat top center;
+}

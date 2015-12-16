@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test1</title>
+</head>
+<body>
+<div>
+    <canvas id="myCanvas" width="200px" height="100px"></canvas>
+</div>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas");
+    var cxt=c.getContext("2d");
+    cxt.moveTo(10, 100);
+    cxt.lineTo(50, 50);
+    cxt.lineTo(100, 30);
+    cxt.stroke();
+</script>
+</body>
+</html>

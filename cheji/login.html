@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <title>快速登录</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div id="container">
+        <button id="quick_login">立即登录</button>
+        <p><span id="remaining_time">4</span>秒</p>
+    </div>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        quick_login();
+        lazy_login();
+    })
+    var remainout;
+    var remaining;
+    function quick_login(){
+        $("#quick_login").click(function(){
+            clearInterval(remainout);
+            clearInterval(remaining);
+            login();
+        });
+    }
+    function lazy_login(){
+        remainout = setTimeout(function(){
+            clearInterval(remaining);
+            login();
+        },5000);
+        remaining = setInterval(function(){
+            var new_time = parseInt($("#remaining_time").text()) - 1;
+            $("#remaining_time").text(new_time);
+        },1000);
+    }
+    function login(){
+        //调用登录方法
+        alert("登录");
+        return;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+}
+
+#container {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#main {
+  margin: auto;
+  text-align: center;
+}
+
+#left {
+  position: relative;
+  width: 300px;
+  display: inline-block;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  border-right: 1px solid #fff;
+}
+
+#right {
+  position: relative;
+  width: 150px;
+  display: inline-block;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.logo {
+  position: relative;
+  width: 107px;
+  height: 106px;
+  margin-right: 15px;
+  vertical-align: middle;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+.item {
+  position: relative;
+  font-size: x-large;
+  vertical-align: middle;
+}
+
+.download {
+  width: 132px;
+  height: 51px;
+  display: block;
+  padding-bottom: 10px;
+  background: url("../images/download.png") no-repeat center top;
+}
+
+.install {
+  width: 132px;
+  height: 51px;
+  display: block;
+  background: url("../images/install.png") no-repeat center top;
+}
+
+#main1 {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.wrapper {
+  font-size: 14px;
+  width: 293px;
+  margin-left: 10px;
+  color: #E61C1C;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+@media screen and (min-width: 476px) {
+  #left {
+    border-color: #E7E7E7;
+  }
+
+  #main1 {
+    width: 400px;
+  }
+
+  .wrapper {
+    width: 400px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .container {
+    background-position: 49.9999% 0;
+  }
+}

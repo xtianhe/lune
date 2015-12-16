@@ -1,0 +1,144 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "微软雅黑";
+  background-color: #EBEBEB;
+}
+
+#container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#section1 {
+  position: relative;
+  width: 91.66667%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wraper {
+  border-bottom: 1px solid #CDCDCD;
+}
+
+.success_content {
+  margin: auto;
+  width: 75%;
+}
+
+.success_td {
+  width: 35%;
+}
+
+.success_img {
+  width: 100%;
+}
+
+.success_span {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #44B011;
+}
+
+.book_code {
+  font-size: 1em;
+  color: #42B20F;
+}
+
+.fail_content {
+  margin: auto;
+  width: 75%;
+  display: none;
+}
+
+.fail_td {
+  width: 35%;
+}
+
+.fail_img {
+  width: 100%;
+}
+
+.fail_span {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #C84847;
+}
+
+#section2 {
+  position: relative;
+  width: 91.66667%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#section3 {
+  position: relative;
+  width: 91.66667%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#section4 {
+  position: relative;
+  width: 91.66667%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.item_name {
+  width: 30%;
+  margin-left: 2%;
+  display: inline-block;
+  color: #838383;
+  margin: 10px auto 10px 5px;
+  vertical-align: middle;
+}
+
+.item_content {
+  width: 66%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item2_content {
+  width: 60%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1900px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1900px) and (min-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}

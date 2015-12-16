@@ -1,0 +1,21 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #7594B3;
+  font-family: "微软雅黑";
+}
+
+#main {
+  width: 100%;
+}
+#main img {
+  width: 100%;
+}

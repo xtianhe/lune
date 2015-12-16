@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/mall/list.css">
+    <title>商城</title>
+</head>
+<body>
+    <div id="container">
+        <div id="menu">
+            <ul class="menu_ul">
+                <li id="mall" class="active menu_li" data-id="section1">商城</li>
+                <li id="points" class="menu_li" class="menu_li" data-id="section2">积分兑换</li>
+            </ul>
+        </div>
+        <div id="section1" class="section" data-index="1">
+            <div id="slidebox" class="disnone" current="0">
+                <img src="/static/images/slide.png" class="slide check">
+                <img src="/static/images/slide.png" class="slide">
+                <img src="/static/images/slide.png" class="slide">
+                <div id="toslide_show">
+                    <a class="toslide check" data-index="0" href="javascript:void(0)"></a>
+                    <a class="toslide" data-index="1" href="javascript:void(0)"></a>
+                    <a class="toslide" data-index="2" href="javascript:void(0)"></a>
+                </div>
+            </div>
+            <a id="mall_ufi" href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-11860559704.17.TQYPR8&id=523398581359" class="produce_wrapper">
+                <div class="goods_img">
+                    <img src="/static/images/a111.png">
+                </div>
+                <span class="descript">
+                    <div class="lf_title">
+                        <p class="lf_title1">同鹿UFi</p>
+                        <p class="lf_title2">随身WiFi的颠覆派</p>
+                    </div>
+                    <div class="rt_title">
+                        <span class="wrapper_price">￥<span class="price">99.9</span></span>
+                    </div>
+                </span>
+            </a>
+            <a id="mall_route" href="https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-11860559704.14.TQYPR8&id=521997559315" class="produce_wrapper mgl">
+                <div class="goods_img">
+                    <img src="/static/images/goods.jpg">
+                </div>
+                <span class="descript">
+                    <div class="lf_title">
+                        <p class="lf_title1">同鹿随身路由</p>
+                        <p class="lf_title2">打破局限 为自由呐喊</p>
+                    </div>
+                    <div class="rt_title">
+                        <span class="wrapper_price"><span>￥</span><span class="price">199</span></span>
+                    </div>
+                </span>
+            </a>
+            <!-- <div id="mall_ufi" class="produce_wrapper disnone">
+                <a class="goods" href="/mall/point">
+                    <img class="goods_img" src="/static/images/ufi.jpg">
+                    <span class="attend">
+                        <span class="wrapper_attend"><span class="attend_num">2596</span>人参与</span>
+                        <img class="attend_bg" src="/static/images/attend_bg.png">
+                    </span>
+                    <div class="descript">
+                        <div class="lf_title">
+                            <p class="lf_title1">同鹿UFI加油9.9元</p>
+                            <p class="lf_title2">产品简介</p>
+                            <p class="lf_title3">同鹿UFI同鹿UFI同鹿UFI同鹿UFI同鹿UFI</p>
+                        </div>
+                        <div class="rt_title">
+                            <p class="rt_title1">1000积分</p>
+                            <del class="rt_title2">价值59元</del>
+                            <p class="rt_title3">换购中</p>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+        </div>
+        <div id="section2" class="section disnone" data-index="2">
+            <p class="current_point">当前积分:{{ point.point }}</p>
+            <div id="slidebox" class="disnone" current="0">
+                <img src="/static/images/ufi.jpg" class="slide check">
+                <img src="/static/images/ufi.jpg" class="slide">
+                <img src="/static/images/ufi.jpg" class="slide">
+                <div id="toslide_show">
+                    <a class="toslide check" data-index="0" href="javascript:void(0)"></a>
+                    <a class="toslide" data-index="1" href="javascript:void(0)"></a>
+                    <a class="toslide" data-index="2" href="javascript:void(0)"></a>
+                </div>
+            </div>
+            <a id="point_lu" href="/mall/point" class="produce_wrapper">
+                <div class="goods_img">
+                    <img src="/static/images/lu.jpg">
+                </div>
+                <span class="descript">
+                    <div class="lf_title">
+                        <p class="lf_title1">小鹿</p>
+                        <p class="lf_title2">萌萌哒~</p>
+                    </div>
+                    <div class="rt_title">
+                        <span class="wrapper_price">￥<span class="price">9.9</span></span>
+                    </div>
+                </span>
+            </a>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/mall/list.js"></script>
+</html>
