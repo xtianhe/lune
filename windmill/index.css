@@ -13,7 +13,7 @@ body {
   width: 400px;
   height: 400px;
   z-index: 1;
-  animation: spin 10s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 .blades {
@@ -21,6 +21,10 @@ body {
   width: 150px;
   height: 30px;
   background-color: #fff;
+  background: linear-gradient(135deg, transparent 10px, white 0), linear-gradient(225deg, transparent 10px, white 0), linear-gradient(315deg, transparent 10px, white 0), linear-gradient(45deg, transparent 10px, white 0);
+  background-position: top left, top right, bottom right, bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .blades1 {
