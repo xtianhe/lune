@@ -1,0 +1,52 @@
+body
+    background-color: #3F7BBF
+.wmd
+    position: relative
+    margin-left: 10%
+    margin-top: 10%
+#blades
+    position: absolute
+    width: 400px
+    height: 400px
+    z-index: 1
+    animation: spin 10s linear infinite
+.blades
+    position: absolute
+    width: 150px
+    height: 30px
+    background-color: #fff
+.blades1
+    transform: rotate(90deg)
+    left: 125px
+    top: 60px
+.blades2
+    top: 185px
+    right: 0
+.blades3
+    transform: rotate(90deg)
+    left: 125px
+    bottom: 60px
+.blades4
+    top: 185px
+.vane
+    position: absolute
+    width: 1px
+    height: 400px
+    background-color: #fff
+.vane1
+    left: 199.5px
+.vane2
+    left: 199.5px
+    transform: rotate(90deg)
+#base
+    position: absolute
+    width: 150px
+    height: 500px
+    top: 200px
+    left: 125px
+    background-color: #565454
+@keyframes spin
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)

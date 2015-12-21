@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta content="Table" name="author">
+    <meta name="copyright" content="Copyright (c) 2010-2015 MaiZuo.">
+    <meta content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="description" content="">
+    <title>touch</title>
+</head>
+<style>
+    body{width:100%;}
+    body,section,img,ul,li{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    #img_main{width: 320px;height:200px;overflow: hidden;visibility: visible;position: relative;}
+    #img_list{width: 960px;position: absolute;top:0;left: 0;}
+    .top_img{position: absolute;top:0;left: 0;}
+</style>
+<body>
+<section class="main">
+    <div id="img_main">
+        <ul id="img_list">
+          <li><img src="img/big.png"></li>
+        </ul>
+    </div>
+    <div id="top_img" class="top_img">
+        <img src="img/small.png">
+    </div>
+</section>
+<script type="text/javascript">
+    var img_list = document.getElementById("img_list");
+    var top_img = document.getElementById("top_img");
+    var nowX = 0, moveX = 0, startX = 0, startY = 0;
+   //touchStart函数：用于记录鼠标开始点
+   function touchStart(e) {
+       e.preventDefault();
+       var touches = e.changedTouches;
+       startX = e.touches[0].pageX;
+   }
+   function touchMove(e) {  //移动函数
+       e.preventDefault();
+       var touches = e.changedtTouches;
+       moveX = e.touches[0].pageX - startX;
+       nowX += moveX;   //累加移动的部分
+       if(nowX > 0) {   //第一张向左移还是第一张
+           nowX = 0;
+           img_list.style.webkitTransform = 'translate(' + nowX + 'px,0)';
+           img_list.style.mzTransform = 'translate(' + nowX + 'px,0)';
+           img_list.style.mozTransform = 'translate(' + nowX + 'px,0)';
+           img_list.style.oTransform = 'translate(' + nowX + 'px,0)';
+       }
+       if( nowX < -640) { //最后一张向左移还是最后一张
+           nowX = -640;
+           img_list.style.webkitTransform = 'translate(' + nowX + 'px,0)';
+       }
+
+       img_list.style.webkitTransform = 'translate(' + nowX + 'px,0)';
+       s = moveX;
+       startX = e.touches[0].pageX;   //移动每次要重新获取
+   }
+   function touchEnd(e) {  //移动结束函数
+       e.preventDefault();
+       e.changedtTouches = null;
+   }
+   top_img.addEventListener('touchstart', touchStart, false);
+   top_img.addEventListener('touchmove', touchMove, false);
+   top_img.addEventListener('touchend', touchEnd, false);
+</script>
+</body>
+</html>
