@@ -68,7 +68,10 @@
                 function eConsole(param) {
                     switch (param.dataIndex) {
                         case 0:
-                            window.location.href = "http://blog.sina.com.cn/eul";
+                            option.xAxis[0].data = ["衬衫","雪纺衫","裤子","高跟鞋","羊毛衫"];
+                            myChart = ec.init(document.getElementById('main'));
+                            myChart.setOption(option);
+                            // window.location.href = "http://blog.sina.com.cn/eul";
                             break;
                         case 1:
                             window.location.href = "http://www.dacai.com/desc/4778";
