@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <title>房产证生成器</title>
+    <link href="./css/hpc.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+</head>
+
+<body>
+    <div class="rich_media">
+        <div class="rich_media_bg hide">
+            (长按图片保存到本地)
+            <img id="newpic" src="./images/water3.png">
+        </div>
+        <div class="rich_media_inner">
+            <div id="js_content" class="rich_media_content">
+                <div id="main">
+                    <div style="height: 484.391px;" class="title">
+                        <img src="./images/hpcbg.jpg" alt="房产证生成器">
+                    </div>
+                    <div class="cotbox">
+                        <div style="clear:both;height:4px;"></div>
+                        <div class="ng-scope">
+                            <input placeholder="请输入您的姓名" id="insert-name2" class="insert-name2" type="text">
+                            <input placeholder="请输入共同所有人" id="insert-name3" class="insert-name2" type="text">
+                        </div>
+                        <ul class="textlist">
+                            <li id="textchoice2" class="static mover" data-index="1" onclick="check(2)">北京</li>
+                            <li id="textchoice1" class="static" data-index="2" onclick="check(1)">上海</li>
+                            <li id="textchoice3" class="static" data-index="3" onclick="check(3)">广州</li>
+                            <li id="textchoice4" class="static" data-index="4" onclick="check(4)">深圳</li>
+                        </ul>
+                        <br>
+                    </div>
+                    <div class="cotbox">
+                        <div class="start">
+                            <div class="ng-btn">
+                                <img id="submit" src="./images/hpcbtn.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)">
+                        <div class="ggggg"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 关注公众号 -->
+        <div id="lxcftg" class="lxcftg">
+            <a href="http://mp.weixin.qq.com/s?__biz=MzAxOTIwMTk5NQ==&mid=409660376&idx=1&sn=9860bb708f3b838277fd897cf2757e2a#rd" target="_blank"><img width="100%" src="./images/app.png"></a>
+        </div>
+    </div>
+    <!-- 微信分享 -->
+    <script src="./js/jquery-1.8.1.min.js"></script>
+    <script src="./js/jweixin-1.0.0.js"></script>
+    <script src="./js/niefun.js"></script>
+    <script src="./js/nievar.js"></script>
+    <script src="./js/hpc.js"></script>
+    <script type="text/javascript">
+    wx.config({
+        appId: 'wx7be250bbab977cd5',
+        timestamp: 1456995882,
+        nonceStr: 'wRrnsdhWwp5oIPll',
+        signature: '0108b9da6fed4f1ad595911a2ca1d506b0012f3a',
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'hideMenuItems',
+            'showMenuItems',
+            'hideAllNonBaseMenuItem',
+            'showAllNonBaseMenuItem',
+            'translateVoice',
+            'startRecord',
+            'stopRecord',
+            'onRecordEnd',
+            'playVoice',
+            'pauseVoice',
+            'stopVoice',
+            'uploadVoice',
+            'downloadVoice',
+            'chooseImage',
+            'previewImage',
+            'uploadImage',
+            'downloadImage',
+            'getNetworkType',
+            'openLocation',
+            'getLocation',
+            'hideOptionMenu',
+            'showOptionMenu',
+            'closeWindow',
+            'scanQRCode',
+            'chooseWXPay',
+            'openProductSpecificView',
+            'addCard',
+            'chooseCard',
+            'openCard'
+        ]
+    });
+
+    var shareData = {
+        title: '房产证生成器',
+        desc: '上海房产证生成器，理想财富你值得拥有!',
+        link: 'http://huodong.55188.com/game/fcz',
+        imgUrl: 'http://huodong.55188.com/game/huodong/fcz/lxcf.jpg'
+    };
+
+    wx.ready(function() {
+        wx.onMenuShareAppMessage(shareData);
+        wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareQQ(shareData);
+        wx.onMenuShareWeibo(shareData);
+    });
+
+    wx.error(function(res) {
+        console.log(res.errMsg);
+    });
+    </script>
+    <!-- END 微信分享 -->
+</body>
+
+</html>

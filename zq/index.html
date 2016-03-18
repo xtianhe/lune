@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>留住嫦娥过中秋</title>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/crafty.js"></script>
+<script>var game_path = location.href.lastIndexOf("/") !== -1 ? location.href.substring(0, location.href.lastIndexOf("/") + 1) : location.href;</script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/zepto.min.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/touch.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/loader.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/sprites.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/component.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/Goddess.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/player.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/levels.js"></script>
+<script type="text/javascript" src="http://s.yunfan.com/topv/game/zq/assets/js/game.js"></script>
+<link rel="stylesheet" type="text/css" href="http://s.yunfan.com/topv/game/zq/assets/css/style.css">
+</head>
+    <body>
+
+        <div class="htmleaf-content game-progress">
+            <div class="progress">
+                <b class="progress__bar">
+                    <span class="progress__text">
+                        距离:<em></em>
+                    </span>
+                </b>
+            </div>
+        </div>
+
+
+
+        <div class="btn start-btn" style="">
+            <img src="http://s.yunfan.com/topv/game/zq/assets/img/a/startbtn.png">
+        </div>
+
+        <div class="result">
+            <div class="mess">你的箭术太烂啦，嫦娥已经成功奔月了！</div>
+            <div class="thebtn again"><img src="http://s.yunfan.com/topv/game/zq/assets/img/a/again-btn.png"></div>
+            <div class="thebtn share"><img src="http://s.yunfan.com/topv/game/zq/assets/img/a/share-btn.png"></div>
+            <div class="link"><a href="http://toutiao.yingshi.com/topv/subject/41?fm=zqgame">立即参与话题，赚好礼迎中秋>></a></div>
+        </div>
+
+
+
+        <div style="display:none;" class="black-float for-weixin">
+            <div id="shareSendTxt" style=" float:right;display:inline-block;margin:0 10px;padding:20px 75px 0 0;text-align:left;font:14px/1.8 Microsoft YaHei, SimHei, helvetica, arial, verdana, tahoma, sans-serif;color:#fff;background:url(http://s.yunfan.com/topv/share/images/qixi/share_weixin_guide.png) no-repeat right 5px;-webkit-background-size:126px 90px;-moz-background-size:126px 90px;-o-background-size:126px 90px;background-size:126px 90px;"><span style="font-size:18px;">分享到微信，请点击右上角</span><br><span>再选择【发送给朋友】</span><br><span>或【分享到朋友圈】</span></div>
+        </div>
+        <div id="cr-stage"></div>
+
+<script type="text/javascript">
+    function share_fun(status, arrow_count){
+        console.log(status, arrow_count);
+        var text = "";
+        var img = "";
+
+        if(status == "Fail"){
+            text = "听说只有1%的人才能留住嫦娥，不服来战！";
+            img = "share0.jpg";
+        }else{
+            if(arrow_count < 6){
+                text = "我用"+arrow_count+"箭留住正品版嫦娥，实力炸天，敢比吗？";
+                img = "share1.jpg";
+            }else if(arrow_count <=10){
+                text = "我用"+arrow_count+"箭留住高仿版嫦娥，实力杰出，你行吗？";
+                img = "share2.jpg";
+            }else{
+                text = "我用"+arrow_count+"箭留住9.9包邮版嫦娥，实力平庸，你笑啥？";
+                img = "share3.jpg";
+            }
+        }
+        img = "http://s.yunfan.com/topv/game/zq/assets/img/a/" + img;
+
+        console.log(text, img);
+    }
+</script>
+    </body>
+</html>

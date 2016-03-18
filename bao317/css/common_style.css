@@ -1,30 +1,30 @@
 @charset "UTF-8";
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: "微软雅黑";
-  background-color: #1D1D1D;
 }
 
-.logo {
-  position: relative;
-  height: 10rem;
-  margin-top: 3rem;
-  text-align: center;
+a {
+  text-decoration: none;
 }
-.logo img {
-  width: 9rem;
-  height: 10rem;
+a:hover {
+  text-decoration: none;
 }
 
-.info {
-  font-size: 0.8rem;
-  color: #686868;
-  text-align: center;
-  padding-top: 0.5rem;
+ul {
+  list-style-type: none;
+}
+
+.disnone {
+  display: none;
 }
 
 @media screen and (min-width: 320px) {
@@ -90,5 +90,10 @@ body {
 @media screen and (min-width: 1440px) {
   html {
     font-size: 54px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 60px;
   }
 }

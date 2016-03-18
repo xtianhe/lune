@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>女神红包生成器-视频头条</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="./img/head.jpg">
+        </div>
+        <div id="content">
+            <img src="./img/bag.jpg">
+            <form action="http://172.17.10.216:8800/event/wechat/showimg" method="post" enctype="multipart/form-data">
+                <span class="item-name">手机平台：</span>
+                <label>
+                    <input type="radio" name="pt" value="1" checked="checked"><span class="radio-content">Android</span></label>
+                <label>
+                    <input type="radio" name="pt" value="2"><span class="radio-content">IOS</span></label>
+                <br>
+                <span class="item-name">您的性别：</span>
+                <label>
+                    <input type="radio" name="sex" value="1" checked="checked"><span class="radio-content">男</span></label>
+                <label>
+                    <input type="radio" name="sex" value="2"><span class="radio-content">女</span></label>
+                <br>
+                <span class="item-name">您的头像：</span>
+                <!-- <input type="file" name="pic1"> -->
+                <a href="javascript:" class="file b_c" hidefocus="true">
+                    <input id="file" name="pic1" type="file" hidefocus="true">选择头像
+                </a>
+                <br>
+                <span class="item-name">对方头像：</span>
+                <!-- <input type="file" name="pic2"> -->
+                <a href="javascript:" class="file b_c" hidefocus="true">
+                    <input id="file" name="pic2" type="file" hidefocus="true">选择头像
+                </a>
+                <br>
+                <span class="item-name">转账金额：</span>
+                <label>
+                    <input type="text" class="money" name="money" placeholder="￥">
+                </label>
+                <br>
+                <div class="create">
+                    <input type="submit" value="一键生成">
+                </div>
+            </form>
+        </div>
+        <div id="footer">
+            <a href="http://mp.weixin.qq.com/s?__biz=MzAxOTIwMTk5NQ==&amp;mid=409660376&amp;idx=1&amp;sn=9860bb708f3b838277fd897cf2757e2a#rd">
+                <img width="100%" src="./img/app.png">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta content="telephone=no" name="format-detection">
+    <title>女神红包生成器-视频头条</title>
+    <link rel="stylesheet" type="text/css" href="http://st.toutiao123.cn/topv/upload/static/www/images/wechat/css/index.css">
+</head>
+
+<body>
+    <img src="http://st.toutiao123.cn/topv/upload/static/manage/images/topvideo.png" style="width:0;height:0; display:block;">
+    <div id="container">
+        <div id="header">
+            <img src="http://st.toutiao123.cn/topv/upload/static/www/images/wechat/img/head.jpg">
+        </div>
+        <div id="content">
+            <img src="http://st.toutiao123.cn/topv/upload/static/www/images/wechat/img/bag.jpg">
+            <form action="http://topv.yunfan.com/event/wechatmsg/showimg" method="post" enctype="multipart/form-data">
+                <span class="item-name">手机平台：</span>
+                <label>
+                    <input type="radio" name="pt" value="1" checked="checked"><span class="radio-content">Android</span></label>
+                <label>
+                    <input type="radio" name="pt" value="2"><span class="radio-content">IOS</span></label>
+                <br>
+                <span class="item-name">您的性别：</span>
+                <label>
+                    <input type="radio" name="sex" value="1" checked="checked"><span class="radio-content">男</span></label>
+                <label>
+                    <input type="radio" name="sex" value="2"><span class="radio-content">女</span></label>
+                <br>
+                <span class="item-name">您的头像：</span>
+                <input id="file1" class="file" name="pic1" type="file" hidefocus="true">
+                <br>
+                <span class="item-name">对方头像：</span>
+                <input id="file2" class="file" name="pic2" type="file" hidefocus="true">
+                <br>
+                <span class="item-name">转账金额：</span>
+                <label>
+                    <input type="text" class="money" name="money" placeholder="￥">
+                </label>
+                <br>
+                <span class="item-name">ps：图片太大可能上传不成功</span>
+                <div class="create">
+                    <input type="submit" value="一键生成">
+                </div>
+            </form>
+        </div>
+        <div id="footer">
+            <a href="http://mp.weixin.qq.com/s?__biz=MzAxOTIwMTk5NQ==&amp;mid=409660376&amp;idx=1&amp;sn=9860bb708f3b838277fd897cf2757e2a#rd">
+                <img width="100%" src="http://st.toutiao123.cn/topv/upload/static/www/images/wechat/img/app.png">
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://st.toutiao123.cn/betayunfanpc/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+    //微信分享相关处理
+    wx.config({
+        debug: false,
+        url: 'http://toutiao.yingshi.com/event/wechatmsg/make',
+        appId: 'wx2e69822728df5c06',
+        timestamp: 1457490827,
+        nonceStr: 'KnK9woh8ZMZrrI1G',
+        signature: 'd67af71560739a77832ecc6b49df6c0ef8c42242',
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone'
+        ]
+    });
+    var shareData = {
+        title: '女神红包生成器',
+        desc: '资金不够，装逼来凑！女神红包你值得拥有！！',
+        link: 'http://toutiao.yingshi.com/event/wechatmsg',
+        imgUrl: 'http://st.toutiao123.cn/topv/upload/static/www/images/wechat/images/share.jpg'
+    };
+
+    function shareWechat() {
+        wx.onMenuShareAppMessage(shareData);
+        wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareQZone(shareData);
+        wx.onMenuShareWeibo(shareData);
+        wx.onMenuShareQQ(shareData);
+    }
+    wx.ready(function() {
+        shareWechat();
+    });
+    wx.error(function(res) {});
+    </script>
+    <script type="text/javascript">
+    (function() {
+        var upimg = {
+            'msg': function(msg) {
+                if ($('.error-float').length) {
+                    $('.error-float').html(msg).show();
+                    setTimeout(function() {
+                        $('.error-float').hide();
+                    }, 3000);
+                } else {
+                    alert(msg);
+                }
+            },
+            //增加监听事件
+            addlisten: function(no) {
+                var me = this;
+                $('#file1, #file2').change(function() {
+                    var size = this.files[0].size;
+                    if (me.checkfile(size)) {
+                        $(this).val('');
+                        me.msg('图片不允许超过100k!');
+                    }
+                });
+                $('form').submit(function(e) {
+                    me.submit(e);
+                });
+            },
+            checkfile: function(size) {
+                return size > 100 * 1024 ? true : false;
+            },
+            //提交处理过程
+            'submit': function(e) {
+                var me = this;
+                if ($('#file1').val() == "") {
+                    me.msg('没有您的头像!');
+                }else if ($('#file2').val() == "") {
+                    me.msg('没有对方头像!');
+                }else if ($('.money').val() == "") {
+                    me.msg('转账金额未填写!');
+                }else{
+                    $('#formbox').submit();
+                    return;
+                }
+                e.preventDefault();
+            },
+            //初始化
+            'init': function() {
+                this.addlisten();
+            }
+        };
+        return {
+            upimg:upimg
+        };
+    })().upimg.init();
+    </script>
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1256004118'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1256004118' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+
+</html>
