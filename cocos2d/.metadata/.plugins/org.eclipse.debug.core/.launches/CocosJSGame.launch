@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.ccdt.debug.core.cocosLaunchConfigType">
+<mapAttribute key="argument_map">
+<mapEntry key="project" value="CocosJSGame"/>
+<mapEntry key="win32runtime" value="runtime/win32/PrebuiltRuntimeJs.exe"/>
+</mapAttribute>
+<stringAttribute key="connector_id" value="jsbinding.win32.attach.connector"/>
+</launchConfiguration>

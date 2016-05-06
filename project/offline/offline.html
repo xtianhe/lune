@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>HTML5离线存储</title>
+    <link rel="stylesheet" type="text/css" href="./css/offline.css">
+    <script type="text/javascript">
+    /*code1,简单粗暴的*/
+    applicationCache.onupdateready = function(){
+        applicationCache.swapCache();
+        location.reload();
+    };
+
+    /*code2，缓存公用方法*/
+    // var EventUtil = {
+    //     addHandler: function(element, type, handler) {
+    //         if (element.addEventListener) {
+    //             element.addEventListener(type, handler, false);
+    //         } else if (element.attachEvent) {
+    //             element.attachEvent("on" + type, handler);
+    //         } else {
+    //             element["on" + type] = handler;
+    //         }
+    //     }
+    // };
+    // EventUtil.addHandler(applicationCache, "updateready", function() { //缓存更新并已下载，要在下次进入页面生效
+    //     applicationCache.update(); //检查缓存manifest文件是否更新，ps:页面加载默认检查一次。
+    //     applicationCache.swapCache(); //交换到新的缓存项中，交换了要下次进入页面才生效
+    //     location.reload(); //重新载入页面
+    // });
+
+
+        // addHandler: function(element, type, handler) {
+        //     if (element.addEventListener) {
+        //         element.addEventListener(type, handler, false);
+        //     } else if (element.attachEvent) {
+        //         element.attachEvent("on" + type, handler);
+        //     } else {
+        //         element["on" + type] = handler;
+        //     }
+        // },
+        // updateCache: function(){
+        //     this.addHandler(applicationCache, "updateready", function() {
+        //         if(window.applicationCache.status == window.applicationCache.UPDATEREADY){
+        //             window.applicationCache.update();
+        //             window.applicationCache.swapCache();
+        //             window.location.reload();
+        //         }
+        //     });
+        // }
+
+    /*code3，提示存在更新*/
+    // window.applicationCache.addEventListener('updateready',function(e){
+    //     if(window.applicationCache.status == window.applicationCache.UPDATEREADY){
+    //         window.applicationCache.swapCache();
+
+    //         if(confirm("loding new?")){
+    //             window.location.reload()
+    //         }
+    //     }
+    // },false)
+    </script>
+</head>
+
+<body>
+    <img class="img" src="image/01.jpg" alt="">
+    <img class="img" src="image/02.jpg" alt="">
+</body>
+
+</html>

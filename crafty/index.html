@@ -1,19 +1,54 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
     <script>
     var game_path = location.href.lastIndexOf("/") !== -1 ? location.href.substring(0, location.href.lastIndexOf("/") + 1) : location.href;
     </script>
-    <div id="game"></div>
+</head>
+
+<body>
+    <div class="htmleaf-content game-progress">
+        <div class="progress">
+            <b class="progress__bar">
+                <span class="progress__text">
+                    距离:<em></em>
+                </span>
+            </b>
+        </div>
+    </div>
+
+
+
+    <div class="btn start-btn" style="">
+        <img src="./assets/img/a/startbtn.png">
+    </div>
+
+    <div class="result">
+        <div class="mess">你的箭术太烂啦，嫦娥已经成功奔月了！</div>
+        <div class="thebtn again"><img src="./assets/img/a/again-btn.png"></div>
+        <div class="thebtn share"><img src="./assets/img/a/share-btn.png"></div>
+        <div class="link"><a href="http://toutiao.yingshi.com/topv/subject/41?fm=zqgame">立即参与话题，赚好礼迎中秋>></a></div>
+    </div>
+
+
+
+    <div style="display:none;" class="black-float for-weixin">
+        <div id="shareSendTxt" style=" float:right;display:inline-block;margin:0 10px;padding:20px 75px 0 0;text-align:left;font:14px/1.8 Microsoft YaHei, SimHei, helvetica, arial, verdana, tahoma, sans-serif;color:#fff;background:url(http://s.yunfan.com/topv/share/images/qixi/share_weixin_guide.png) no-repeat right 5px;-webkit-background-size:126px 90px;-moz-background-size:126px 90px;-o-background-size:126px 90px;background-size:126px 90px;"><span style="font-size:18px;">分享到微信，请点击右上角</span><br><span>再选择【发送给朋友】</span><br><span>或【分享到朋友圈】</span></div>
+    </div>
+    <div id="cr-stage"></div>
+
     <script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="crafty.min.js"></script>
-    <script type="text/javascript" src="touch.js"></script>
+    <script type="text/javascript" src="crafty.js"></script>
+    <!-- <script type="text/javascript" src="touch.js"></script> -->
     <script type="text/javascript" src="component.js"></script>
     <script type="text/javascript" src="scene.js"></script>
+    <script type="text/javascript" src="sprites.js"></script>
     <script type="text/javascript" src="init.js"></script>
 </body>
 

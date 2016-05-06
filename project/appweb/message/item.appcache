@@ -1,0 +1,19 @@
+CACHE MANIFEST
+#v1.0.29
+
+#需要缓存的文件
+CACHE:
+../common/js/jquery.min.js
+../common/js/iscroll.js
+../common/js/pullToRefresh.js
+../common/js/localforage.min.js
+js/main.js
+css/pullToRefresh.css
+css/item.css
+
+#不需要缓存的文件
+NETWORK:
+*
+
+#无法访问页面
+FALLBACK: /

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>防碰瓷挑战赛 赢MEHOME众筹新品记录仪MD2</title>
+    <link rel="stylesheet" type="text/css" href="./starracing2016/public/index.css">
+    <script type="text/javascript">
+    ! function(e, n) {
+        "use strict";
+        e.UEM = e.UEM || {}, e.UEM.perf = n()
+    }(this, function() {
+        "use strict";
+
+        function e() {
+            g.uaeId && !i() && c()
+        }
+
+        function n(e) {
+            var n;
+            e = g.beforeHandleError(e) || e, g.uaeId && !r(o(e)) && (n = {
+                app: "uae" + g.uaeId,
+                path: encodeURIComponent(p.location.pathname + p.location.hash).substring(0, 50),
+                err_msg: encodeURIComponent(o(e)).substring(0, 1999),
+                err_file: t(e.filename),
+                err_line: e.lineno || "",
+                err_col: e.colno || "",
+                err_type: encodeURIComponent(e.error && e.error.name || ""),
+                err_custom_key: encodeURIComponent(p.location.hash || "").substring(0, 50)
+            }, u(a(n)))
+        }
+
+        function r(e) {
+            return e.toLowerCase().indexOf("script error") >= 0 ? !0 : !1
+        }
+
+        function t(e) {
+            return e ? e : encodeURIComponent("filename is empty<br>ua:" + window.navigator.userAgent).substring(0, 1999)
+        }
+
+        function o(e) {
+            try {
+                return (e.error && e.error.stack || e.message || "").replace(/\r/g, "").replace(/\n/g, " <br> ").replace(/\\/g, "/")
+            } catch (n) {
+                return n.message || ""
+            }
+        }
+
+        function a(e) {
+            var n = p.location.href,
+                r = p.location.host,
+                t = e.err_file;
+            return t.length > 0 && -1 !== t.indexOf(r) && (t = 0 === n.indexOf("https") ? t.substring(8 + r.length, t.length) : t.substring(7 + r.length, t.length)), e.err_file = encodeURIComponent(t), e
+        }
+
+        function i() {
+            return Math.random() > g.percent ? !0 : void 0
+        }
+
+        function c() {
+            if (p.performance && p.performance.timing) {
+                var e = p.performance.timing,
+                    n = +new Date;
+                e.loadEventStart ? s(e, n) : p.addEventListener("load", function() {
+                    s(e, n)
+                })
+            }
+        }
+
+        function s(e, n) {
+            var r = e.navigationStart;
+            f("app", "uae" + g.uaeId), f("path", g.path), f("dns", e.domainLookupEnd - e.domainLookupStart), f("conn", e.connectEnd - e.connectStart), f("req", e.responseStart - e.requestStart), f("res", e.responseEnd - e.responseStart), f("rt", e.responseEnd - r), f("ws", e.domLoading - r), f("fs", n - r), f("intr", e.domContentLoadedEventEnd - r), u(m)
+        }
+
+        function u(e) {
+            (new Image).src = d(e)
+        }
+
+        function d(e) {
+            var n = l;
+            for (var r in e) n += "&" + r + "=" + e[r];
+            return n += "&_t=" + (new Date).getTime()
+        }
+
+        function f(e, n) {
+            m[e] = n
+        }
+        var p = window,
+            l = "http://bench.uc.cn/c?uc_param_str=ntnwcpfr",
+            m = {},
+            g = {};
+        return window.JSTracker = window.JSTracker || [], setInterval(function() {
+            var e = JSTracker.length,
+                r = {},
+                t = {};
+            if (e > 0)
+                for (; e-- > 0;) t = JSTracker.shift(), r.message = t.msg || "", r.filename = t.filename || "", r.lineno = t.line || "", r.colno = t.col || "", n(r)
+        }, 1e3), e.config = function(e) {
+            g.uaeId = e.uaeId, g.path = e.path || "index", g.percent = e.percent || .1, g.beforeHandleError = e.beforeHandleError || function(e) {
+                return e
+            }
+        }, p.addEventListener("error", n), e
+    });
+    </script>
+</head>
+
+<body>
+    <!-- Components here -->
+    <div id="page-index" class="logic-page">
+        <div class="btn-go-rule">游戏规则</div>
+        <div class="game-desc">
+            <p>又是清明踏春的好时节</p>
+            <p>可听说一路碰瓷党猖獗</p>
+            <p>你准备好了吗？</p>
+        </div>
+        <div class="star-selector-title"></div>
+        <div class="btn-select-star button"></div>
+    </div>
+    <div id="page-game" class="logic-page">
+        <div class="start-game"></div>
+        <div class="star-comment-wrap">
+            <div class="avatar"></div>
+            <div class="comment"></div>
+        </div>
+        <div class="game-status">
+            <div class="coin-num-before">
+                <div class="coin-num-0"></div>
+                <div class="coin-num-1"></div>
+            </div>
+            <div class="coin-num">0</div>
+            <div class="distance">
+                <label class="msg-remind">还剩</label>
+                <span></span>
+                <label class="msg-m">m</label>
+            </div>
+        </div>
+        <!-- <div class="ratio">
+        RATIO <span>2</span>
+    </div>
+    <div class="fps">
+        FPS <span>0</span>
+    </div> -->
+        <div class="sky"></div>
+        <div class="sketch"></div>
+        <canvas id="canvas-scene"></canvas>
+    </div>
+    <div id="page-result" class="logic-page">
+        <div class="header">
+            <div class="btn-go-rule"></div>
+        </div>
+        <div id="rule">
+            <a href="./rule.html">活动规则</a>
+        </div>
+        <div class="main-wrap">
+            <div class="container319">
+                <div class="wave">
+                    <div class="wave2"></div>
+                    <div class="wave1"></div>
+                    <span class="up">0</span>
+                </div>
+                <img class="cover" data-src="./starracing2016/public/c/page-result/img/cover.png">
+            </div>
+            <!-- 不兼容游戏黑名单 -->
+            <section id="wrap-blacklist" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你的手机无法参加该活动</p>
+                    <p>可以换台手机体验哦</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <!-- <div class="btn-download button">下载UC浏览器</div> -->
+                </div>
+                <div class="msg-notice-collection">
+                    <!-- <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p> -->
+                </div>
+            </section>
+            <!-- 非微信非QQ用户- 无用 -->
+            <section id="wrap-others-browser" class="wrap-game-status">
+                <div class="game-status">
+                    <p>小主赛车成绩棒棒哒</p>
+                    <p>可以赢一台MeHome行车记录仪喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <!-- <div class="btn-download button">下载UC浏览器</div> -->
+                </div>
+                <div class="msg-notice-collection">
+                    <!-- <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p> -->
+                </div>
+            </section>
+            <!-- IOS不能分享版本 -->
+            <section id="wrap-ios-no-share" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你已经获得<span class="total-point"></span>金币</p>
+                    <p>还需<span class="remind-point"></span>元即可获得一台MeHome行车记录仪喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-download-latest button"><!-- 升级最新版，邀朋友集金币 --></div>
+                    <div class="btn-again">
+                        <!-- <p>再玩一次</p>
+                        <p>（取最新成绩）</p> -->
+                    </div>
+                </div>
+            </section>
+            <!-- 已开启跑道，朋友接力已结束 -->
+            <section id="wrap-friend-created-finished" class="wrap-game-status">
+                <div class="game-status">
+
+
+                    <p><span class="nick-owner"></span>你的好友已获得<span class="total-point"></span>金币,成功获得<span class="total-qian"></span>元助力基金</p>
+                    <p>朋友已经可以领取一台MeHome行车记录仪</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-check-myself button"><!-- 查看我的成绩 --></div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+            <!-- 已开启跑道，来朋友页面接力 -->
+            <section id="wrap-friend-created" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span>你的好友已获得<span class="total-point"></span>金币,成功获得<span class="total-qian"></span>元助力基金</p>
+                    <p>还需<span class="remind-point"></span>元即可获得一台MeHome行车记录仪喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-help button btn-left"><!-- 帮Ta集金币 --></div>
+                    <div class="btn-check-myself button btn-right"><!-- 查看我的成绩 --></div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+            <!-- 未开启跑道，朋友接力已结束 -->
+            <section id="wrap-friend-finished" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span>你的好友已获得<span class="total-point"></span>金币,成功获得<span class="total-qian"></span>元助力基金</p>
+                    <p>朋友已经可以领取一台MeHome行车记录仪</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-want-play button"><!-- 我也要玩 --></div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+            <!-- 未开启跑道，来朋友页面帮接力 -->
+            <section id="wrap-friend" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span>你的好友已获得<span class="total-point"></span>金币,成功获得<span class="total-qian"></span>元助力基金</p>
+                    <p>朋友还需<span class="remind-point"></span>元即可获得一台MeHome行车记录仪喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-help btn-left"><!-- 帮Ta集金币 --></div>
+                    <div class="btn-want-play btn-right"><!-- 我也要玩 --></div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+
+
+            <!-- 已满足获奖资格 -->
+            <section id="wrap-finished" class="wrap-game-status">
+                <div class="game-status">
+                    <p>获得<span class="total-point"></span>元助力基金，总集满<span class="total-qian">299</span>元助力基金</p>
+                    <p>截图发到公众号领取行车记录仪，先到先得喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-go-draw btn-left btnRock"><!-- 去领现金 --></div>
+                    <div class="btn-share-again btn-right"><!-- 继续分享 --></div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+            <!-- 未满足获奖资格 -->
+            <section id="wrap-unfinished" class="wrap-game-status">
+                <div class="game-status">
+                    <p>获得<span class="total-point"></span>元助力基金，总集得<span class="total-qian"></span>元助力基金</p>
+                    <p>还需<span class="remind-point"></span>元就可以获得一台新品MeHome行车记录仪！</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-share btn-left btnRock"><!-- 找朋友集金币 --></div>
+                    <div class="btn-again btn-right">
+                        <!-- <p>挑战新成绩</p>
+                        <p>（取最高分）</p> -->
+                    </div>
+                </div>
+                <div class="msg-notice-collection">
+                </div>
+            </section>
+        </div>
+        <!-- 封神榜 -->
+        <div id="cmp-friends">
+            <p class="title"></p>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+    'use strict';
+    window.addEventListener('error', function() {
+        // alert('message:' + event.message + '`filename:' + event.filename + '`lineno:' + event.lineno);
+    });
+    </script>
+    <script type="text/javascript">
+    window.UEM.perf.config({
+        uaeId: '2023'
+    });
+    </script>
+    <script type="text/javascript">
+    'use strict';
+    window.__data = {};
+    window.CONF = {
+        RESOURCE: {
+            INDEX: [
+                './starracing2016/public/c/images/loading_brush_68847b2.png',
+                './starracing2016/public/c/images/loading_road_line_c1572e6.png',
+                './starracing2016/public/c/images/banner_index_9d842ac.png',
+                './starracing2016/public/c/images/slogan_475cec5.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/0.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/1.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/2.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/3.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/4.png'
+            ],
+            GAME: [
+                './s/uae/g/01/starracing2016/race/game/car.png',
+                './s/uae/g/01/starracing2016/race/game/street_lamp_left.png',
+                './s/uae/g/01/starracing2016/race/game/street_lamp_right.png',
+                './s/uae/g/01/starracing2016/race/game/passerby0.png',
+                './s/uae/g/01/starracing2016/race/game/passerby1.png',
+                './s/uae/g/01/starracing2016/race/game/passerby2.png',
+                './s/uae/g/01/starracing2016/race/game/passerby3.png',
+                './s/uae/g/01/starracing2016/race/game/passerby4.png',
+                './s/uae/g/01/starracing2016/race/game/passerby5.png',
+                './s/uae/g/01/starracing2016/race/game/building0_front.png',
+                './s/uae/g/01/starracing2016/race/game/building0_side.png',
+                './s/uae/g/01/starracing2016/race/game/building1_front.png',
+                './s/uae/g/01/starracing2016/race/game/building1_side.png',
+                './s/uae/g/01/starracing2016/race/game/building2_front.png',
+                './s/uae/g/01/starracing2016/race/game/building2_side.png',
+                './s/uae/g/01/starracing2016/race/game/building3_front.png',
+                './s/uae/g/01/starracing2016/race/game/building3_side.png',
+                './s/uae/g/01/starracing2016/race/game/building4_front.png',
+                './s/uae/g/01/starracing2016/race/game/building4_side.png',
+                './s/uae/g/01/starracing2016/race/game/building5_front.png',
+                './s/uae/g/01/starracing2016/race/game/building5_side.png',
+                './s/uae/g/01/starracing2016/race/game/building6_front.png',
+                './s/uae/g/01/starracing2016/race/game/building6_side.png',
+                './s/uae/g/01/starracing2016/race/game/building7_front.png',
+                './s/uae/g/01/starracing2016/race/game/building7_side.png',
+                './s/uae/g/01/starracing2016/race/game/tree_left.png',
+                './s/uae/g/01/starracing2016/race/game/tree_right.png',
+                './s/uae/g/01/starracing2016/race/game/gold_coin.png',
+                './s/uae/g/01/starracing2016/race/game/traffic_cone_frames.png',
+                './s/uae/g/01/starracing2016/race/game/peng.png',
+                './s/uae/g/01/starracing2016/race/game/smoke_frames.png',
+                './s/uae/g/01/starracing2016/race/game/smoke_less_frames.png',
+                './s/uae/g/01/starracing2016/race/game/obstacle_car_0.png',
+                './s/uae/g/01/starracing2016/race/game/obstacle_car_1.png',
+                './s/uae/g/01/starracing2016/race/game/obstacle_car_2.png',
+                './s/uae/g/01/starracing2016/race/game/obstacle_car_3.png',
+                './s/uae/g/01/starracing2016/race/game/fog.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/0.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/1.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/2.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/3.png',
+                './s/uae/g/01/starracing2016/race/star_avatar/4.png',
+                './starracing2016/public/c/images/start_game_ac968c6.png',
+                './starracing2016/public/c/images/sketch_78072ba.png',
+                './starracing2016/public/c/images/sky_8234540.png',
+                './starracing2016/public/c/images/coin_num_0_2912dab.png',
+                './starracing2016/public/c/images/coin_num_1_1cfc6d3.png',
+                './starracing2016/public/c/images/gesture_teach_6cd1f0d.png',
+                './starracing2016/public/c/images/gesture_point_3bf5135.png',
+                './starracing2016/public/c/images/game_fail_3f4c1f3.png'
+            ],
+            GAME_MUSIC: [
+                './s/uae/g/01/starracing2016/race/audio/bgm.mp3',
+                './s/uae/g/01/starracing2016/race/audio/321go.mp3',
+                './s/uae/g/01/starracing2016/race/audio/gameover.mp3'
+            ],
+            RESULT: [
+                // './starracing2016/public/c/images/header_ae5ef07.png',
+                './starracing2016/public/c/page-result/img/coin_rain.png',
+                './starracing2016/public/c/page-result/img/wave2_f0d4352.png',
+                './starracing2016/public/c/page-result/img/wave1_b39b6d5.png',
+                './starracing2016/public/c/page-result/img/cover.png',
+                './starracing2016/public/c/images/mask_share_car_5bcd0ee.png',
+                './starracing2016/public/c/images/mask_share_smoke_4ad8d2e.png',
+                './starracing2016/public/c/images/share_icon_8b2f675.png'
+            ],
+            GO_UC: [
+                './starracing2016/public/c/images/banner_uc/banner_coin_43eb7fe.png'
+            ],
+            GO_UC_BANNER: [
+                './starracing2016/public/c/images/banner_uc/banner_go_main_7432fd6.png',
+                './starracing2016/public/c/images/banner_uc/banner_upgrade_b0172d3.png',
+                './starracing2016/public/c/images/banner_uc/banner_download_129ace0.png'
+            ]
+        },
+        RESOLUTION_RATIO: 2,
+        MAX_RESOLUTION_RATIO: 2,
+        MIN_RESOLUTION_RATIO: 1.4,
+        SEGMENT_NUM: 6,
+        YATTER_INTER: 4000,
+        COMMENT_DURATION: 15000,
+        TOTALL_DISTANCE: 500,
+        DISTANCE: 500,
+        UPDATE_GEAR_COMBO: 5,
+        LOST_GOLD_NUM: 1,
+        MIN_COIN_NUM: 4,
+        HOME_PAGE: './index.html',
+        WECHAT_NOTICE_PAGE: './wechat.html',
+        RULE_PAGE: './rule.html',
+        MAIN_MEETING_PAGE: 'http://319.uc.cn/starplay/index?ato=main&uc_param_str=dspfssnieisivecpmibifrdnlagd&entry=flycar&uc_biz_str=S%3Acustom%7CC%3Atitlebar_hover_2',
+        GAME_FPS: 35,
+        BACKGROUND_GAME_FPS: 10,
+        DEFAULT: {
+            OWNER_NICK: 'Ta',
+            NICK: '车友',
+            FIRST_OWNER_NICK: '车主',
+            AVATAR: './s/uae/g/01/starracing2016/race/default_avatar.png'
+        },
+        MAX_NICK_NAME: 5,
+        LEAST_WAITING_TIME: 1700,
+        LATEST_UC_VERSION: {
+            IOS: '10.9.7',
+            ANDROID: '10.9.5.729'
+        },
+        IOS_NO_SHARE_VERSION: '10.9.5.',
+        WECHAT_BLOCK: false,
+        WECHAT_TIMELINE_BLOCK: false
+    };
+    window.CONF.GAME_POINT_TIMES = 1;
+    window.MSG = {
+        COMMENT: {
+            YATTER: [
+                '小心碰瓷党',
+                '碰瓷会减速',
+                '你是最棒的',
+                '天才赛车手',
+                '车技不错喔'
+            ],
+            CRASH: [
+                '啊哦，撞车了',
+                '小心，会扣分',
+                '别让我失望哦'
+            ]
+        },
+        REMIND: '【赢一台MeHome行车记录仪活动】兑奖马上开始！',
+        SHARE: {
+            TITLE: '快来！我正在参加防碰瓷挑战赛，还有MEHOME众筹新品记录仪MD2可以拿！',
+            DESC: '哈哈！今天参加防碰瓷挑战赛，成功收集到XXX个金币，很快就能免费拿新品记录仪了，你也一起开挑战吧！',
+            IMG_URL: 'http://api.mehome.tv/MeHome/starracing2016/public/c/images/MeHome_share.jpg'
+        }
+    };
+    window.FILTER = {
+        getUserPageUrl: function(magic) {
+            return window.location.origin + '/starracing2016/index' +
+                '?magic=' + magic +
+                '&uc_param_str=dsdnfrpfbivesscpgimibtbmnisieijblauputogpintnw' +
+                '&uc_biz_str=S%3Acustom%7CC%3Atitlebar_hover_2';
+        },
+        nick: function(nick) {
+            if (!nick) {
+                return CONF.DEFAULT.NICK;
+            }
+            if (nick && nick.length > CONF.MAX_NICK_NAME) {
+                var i = 0,
+                    num = 0,
+                    patrn = /^[a-zA-Z0-9]$/;
+                while (i < nick.length) {
+                    if (patrn.exec(nick[i])) {
+                        num += 1;
+                    } else {
+                        num += 2;
+                    }
+                    if (num > CONF.MAX_NICK_NAME * 2) {
+                        break;
+                    }
+                    i++;
+                }
+                if (i !== nick.length) {
+                    return nick.substr(0, i) + '...';
+                }
+            }
+            return nick;
+        },
+        avatar: function(avatar) {
+            if (avatar && avatar.length) {
+                return avatar;
+            } else {
+                return CONF.DEFAULT.AVATAR;
+            }
+        },
+        inBlacklist: function() {
+            var ua = window.navigator.userAgent;
+            if (ua.indexOf('Coolpad 8720L') > 0 ||
+                ua.indexOf('SM-G3818') > 0 ||
+                ua.indexOf('SM-G3812') > 0) {
+                return true;
+            }
+            return false;
+        }
+    };
+    window.onload = UEM.perf;
+    </script>
+    <script type="text/javascript">
+    "use strict";
+    window.localStorage && !window.localStorage.getItem("needReloadForMiddlewareBug") && (window.localStorage.setItem("needReloadForMiddlewareBug", !0), setTimeout(function() {
+        window.UC_FLYCAR_APP_INITED || window.location.reload(!0)
+    }, 2e3));
+    </script>
+    <script type="text/javascript" src="./starracing2016/public/jquery.js"></script>
+    <script type="text/javascript">
+        var SIGN = getQueryString("sign");
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+        jQuery.ajax({
+            url: "http://api.mehome.tv/game/init&sign="+SIGN,
+            dataType: 'jsonp',
+            jsonp:'callback',
+            success: function(res){
+                if (!res.ok) {
+                    location.href = res.url+"&sign="+SIGN;
+                }
+            }
+        })
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+    </script>
+
+    <script type="text/javascript" src="./starracing2016/public/index.js?v=11111421052421"></script>
+</body>
+
+</html>

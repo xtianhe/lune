@@ -1,0 +1,14 @@
+    var SushiSprite = cc.Sprite.extend({
+        onEnter:function () {
+            cc.log("onEnter");
+            this._super();
+            this.addTouchEventListenser();
+        },
+
+        onExit:function () {
+            cc.log("onExit");
+        }
+
+    });
+    
+    

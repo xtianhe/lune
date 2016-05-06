@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\study\httpd\htdocs\cocos2d\.metadata\.plugins\org.ccdt.jsdt.core\indexes
+1817352822.index
+1865977155.index
+1265812394.index
+4016761230.index
+1463724569.index
+373487619.index
