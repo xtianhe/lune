@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1000</title>
+</head>
+<body>
+<div id="a1"></div>
+<script type="text/javascript" src="/m3u8-v2.0/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var flashvars={
+        f:'m3u8.swf',
+        a:'http://172.17.10.206:8080/hls/1000.m3u8',
+        s:4,
+        c:0,
+        p:1,
+        lv:1
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    CKobject.embed('/m3u8-v2.0/ckplayer/ckplayer.swf','a1','ckplayer_a1','100%','600px',false,flashvars,params);
+</script>
+
+</body>
+</html>
