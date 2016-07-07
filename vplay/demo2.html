@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点播</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "微软雅黑"
+        background-color: #eee;
+    }
+    .disnone{
+        display: none;
+    }
+    .video {
+        top: 1rem;
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+    }
+    .video .ap1{
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+    }
+    @media screen and (min-width: 320px) { html { font-size: 12px; } }
+    @media screen and (min-width: 346px) { html { font-size: 13px; } }
+    @media screen and (min-width: 373px) { html { font-size: 14px; } }
+    @media screen and (min-width: 400px) { html { font-size: 15px; } }
+    @media screen and (min-width: 480px) { html { font-size: 18px; } }
+    @media screen and (min-width: 560px) { html { font-size: 21px; } }
+    @media screen and (min-width: 640px) { html { font-size: 24px; } }
+    @media screen and (min-width: 720px) { html { font-size: 27px; } }
+    @media screen and (min-width: 746px) { html { font-size: 28px; } }
+    @media screen and (min-width: 772px) { html { font-size: 29px; } }
+    @media screen and (min-width: 800px) { html { font-size: 30px; } }
+    @media screen and (min-width: 1024px) { html { font-size: 38px; } }
+    @media screen and (min-width: 1440px) { html { font-size: 54px; } }
+    @media screen and (min-width: 1856px) { html { font-size: 60px; } }
+    .btn{
+        float: left;
+        width: 44%;
+        height: 3rem;
+        margin: 1rem 0 0 4%;
+        border: none;
+        background-color: #389BD2;
+        color: #fff;
+        border-radius: .5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        outline: none;
+    }
+    .btn:disabled{
+        background-color: #A2B1B9;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="height:23rem;">
+        <div class="video">
+            <video id="v1" class="ap1 disnone" playsinline webkit-playsinline controls="controls">
+                <source src="http://v.baoliao.topv.yunfan.com/video/t0169230a3f279b890d.mp4" type="video/mp4">
+            </video>
+            <canvas id="c1" class="ap1 disnone"></canvas>
+        </div>
+        <div class="video" >
+            <video id="v2" class="ap1 disnone" playsinline webkit-playsinline controls="controls" autoplay="autoplay">
+                <source src="http://v.baoliao.topv.yunfan.com/video/t01e673882603ad8fcf.mp4" type="video/mp4">
+            </video>
+            <canvas id="c2" class="ap1"></canvas>
+        </div>
+    </div>
+    <div>
+        <button id="play" class="btn" >播放</button>
+        <button id="paused" class="btn" >暂停</button>
+    </div>
+    <script type="text/javascript" src="http://st.toutiao123.cn/js/lib/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/canvas-video-player.js"></script>
+    <script type="text/javascript">
+        $("#play").click(function() {
+            console.log('play');
+            $("#v1").show().get(0).play();
+            $("#c1").show();
+            $("#v2").get(0).pause();
+            $("#c2").hide();
+        });
+        $("#paused").click(function() {
+            $("#v1").hide().get(0).pause();
+            $("#c1").hide();
+            $("#v2").get(0).play();
+            $("#c2").show();
+        });
+        $("#v2").one("ended", function(){
+            console.log("结束")
+            $("#c1").show();
+            $("#c2").hide();
+            $("#play").removeAttr("disabled");
+            $("#paused").removeAttr("disabled");
+            var canvasVideo = new CanvasVideoPlayer({
+                videoSelector: '#v1',
+                canvasSelector: '#c1',
+                framesPerSecond: 25,
+                hideVideo: true, // should script hide the video element
+                autoplay: false,
+                // IMPORTANT On iOS can't be used together with autoplay, autoplay will be disabled
+                audio: false, // can be true/false (it will use video file for audio), or selector for a separate audio file
+                resetOnLastFrame: true, // should video reset back to the first frame after it finishes playing
+                loop: false
+            });
+            $("#v1").get(0).play();
+        })
+        var canvasVideo2 = new CanvasVideoPlayer({
+            videoSelector: '#v2',
+            canvasSelector: '#c2',
+            framesPerSecond: 25,
+            hideVideo: true, // should script hide the video element
+            autoplay: false,
+            // IMPORTANT On iOS can't be used together with autoplay, autoplay will be disabled
+            audio: false, // can be true/false (it will use video file for audio), or selector for a separate audio file
+            resetOnLastFrame: true, // should video reset back to the first frame after it finishes playing
+            loop: false
+        });
+    </script>
+</body>
+
+</html>

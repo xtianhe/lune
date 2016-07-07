@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点播</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "微软雅黑"
+        background-color: #eee;
+    }
+    .disnone{
+        display: none;
+    }
+
+    .video {
+        top: 1rem;
+        width: 100%;
+        height: 20rem;
+        position: absolute;
+    }
+    .video video{
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+    }
+    @media screen and (min-width: 320px) { html { font-size: 12px; } }
+    @media screen and (min-width: 346px) { html { font-size: 13px; } }
+    @media screen and (min-width: 373px) { html { font-size: 14px; } }
+    @media screen and (min-width: 400px) { html { font-size: 15px; } }
+    @media screen and (min-width: 480px) { html { font-size: 18px; } }
+    @media screen and (min-width: 560px) { html { font-size: 21px; } }
+    @media screen and (min-width: 640px) { html { font-size: 24px; } }
+    @media screen and (min-width: 720px) { html { font-size: 27px; } }
+    @media screen and (min-width: 746px) { html { font-size: 28px; } }
+    @media screen and (min-width: 772px) { html { font-size: 29px; } }
+    @media screen and (min-width: 800px) { html { font-size: 30px; } }
+    @media screen and (min-width: 1024px) { html { font-size: 38px; } }
+    @media screen and (min-width: 1440px) { html { font-size: 54px; } }
+    @media screen and (min-width: 1856px) { html { font-size: 60px; } }
+    .btn{
+        float: left;
+        width: 44%;
+        height: 3rem;
+        margin: 1rem 0 0 4%;
+        border: none;
+        background-color: #389BD2;
+        color: #fff;
+        border-radius: .5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        outline: none;
+    }
+    .btn:disabled{
+        background-color: #A2B1B9;
+    }
+    #im1{
+        position: absolute;
+        width: 5rem;
+        margin: -2.5rem;
+        left: 50%;
+        top: 10rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="height:23rem;">
+        <div class="video" >
+            <video playsinline webkit-playsinline autoplay="autoplay">
+                <source src="http://www.runoob.com/try/demo_source/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div>
+        <button id="play" class="btn" disabled="disabled">播放</button>
+        <button id="paused" class="btn" disabled="disabled">暂停</button>
+    </div>
+    <script type="text/javascript" src="http://st.toutiao123.cn/js/lib/jquery.js"></script>
+    <script type="text/javascript">
+        var tag = true;
+        var lastTime = 0;
+        $("#play").click(function() {
+            console.log('play');
+            $("video").get(0).pause();
+        });
+        $("#paused").click(function() {
+            $("video").get(0).play();
+        });
+        $("video").on("timeupdate",function(){
+            if (tag) {
+                var currentTime = $(this).get(0).currentTime;
+                if (currentTime - lastTime > 1) {
+                    $(this).get(0).currentTime = lastTime;
+                }else{
+                    lastTime = currentTime;
+                }
+            }
+        });
+        $("video").one("ended", function(){
+            tag = false;
+            $("#play").removeAttr("disabled");
+            $("#paused").removeAttr("disabled");
+            $("video").attr("src","http://v.baoliao.topv.yunfan.com/video/tounaofengbao.mp4");
+        })
+        // function myFunction(){
+        //     $("#play").removeAttr("disabled");
+        //     $("#paused").removeAttr("disabled");
+        //     $("video").attr("src","http://v.baoliao.topv.yunfan.com/video/tounaofengbao.mp4");
+        //     // $("video").get(0).play()
+        // }
+        // setTimeout(function(){
+        //     // alert($("video").get(0).currentTime);
+        //     // alert(2222)
+        // },5000)
+
+
+
+
+        $("#im1").click(function(){
+            $("video").trigger("click")
+        });
+        if (isWeiXin()) {
+            $("#im1").show();
+        }
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+BuildVideoInfo = {
+    "e": {
+        "desc": "",
+        "provider": "play",
+        "code": 0
+    },
+    "data": {
+        "stream": [{
+            "logo": "none",
+            "media_type": "standard",
+            "audio_lang": "default",
+            "transfer_mode_org": "http",
+            "subtitle_lang": "default",
+            "segs": [{
+                "total_milliseconds_audio": "389399",
+                "fileid": "0300020900577C54BD960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF",
+                "total_milliseconds_video": "300000",
+                "key": "af001aaa6789f1bd282b8c96",
+                "size": "20054259"
+            }],
+            "stream_type": "flvhd",
+            "width": 640,
+            "transfer_mode": "http",
+            "size": 165411343,
+            "height": 360,
+            "milliseconds_video": 3162000,
+            "drm_type": "default",
+            "milliseconds_audio": 3161954,
+            "stream_fileid": "0300020900577C54BD960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF"
+        }, {
+            "logo": "none",
+            "media_type": "standard",
+            "audio_lang": "default",
+            "transfer_mode_org": "http",
+            "subtitle_lang": "default",
+            "segs": [{
+                "total_milliseconds_audio": "3161954",
+                "fileid": "0310200100577C564D960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF",
+                "total_milliseconds_video": "300000",
+                "key": "ceec8c3eb13c71222412a9f7",
+                "size": "118929149"
+            }],
+            "stream_type": "3gphd",
+            "width": 640,
+            "transfer_mode": "http",
+            "size": 118929149,
+            "height": 360,
+            "milliseconds_video": 3162000,
+            "drm_type": "default",
+            "milliseconds_audio": 3161954,
+            "stream_fileid": "0310200100577C564D960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF"
+        }, {
+            "logo": "none",
+            "media_type": "standard",
+            "audio_lang": "default",
+            "transfer_mode_org": "http",
+            "subtitle_lang": "default",
+            "segs": [{
+                "total_milliseconds_audio": "389399",
+                "fileid": "0300080800577C5EEE960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF",
+                "total_milliseconds_video": "300000",
+                "key": "2743e3ec46c25db8282b8c96",
+                "size": "41509461"
+            }],
+            "stream_type": "mp4hd",
+            "width": 960,
+            "transfer_mode": "http",
+            "size": 342468963,
+            "height": 540,
+            "milliseconds_video": 3161960,
+            "drm_type": "default",
+            "milliseconds_audio": 3161954,
+            "stream_fileid": "0300080800577C5EEE960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF"
+        }, {
+            "logo": "none",
+            "media_type": "standard",
+            "audio_lang": "default",
+            "transfer_mode_org": "http",
+            "subtitle_lang": "default",
+            "segs": [{
+                "total_milliseconds_audio": "188082",
+                "fileid": "0300011100577C6077960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF",
+                "total_milliseconds_video": "188080",
+                "key": "ecf02e05076316e8261f1b46",
+                "size": "43449613"
+            }, {
+                "total_milliseconds_audio": "201317",
+                "fileid": "0300011101577C6077960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF",
+                "total_milliseconds_video": "111920",
+                "key": "bc7c1bc4c57065cc282b8c96",
+                "size": "34884985"
+            }],
+            "stream_type": "mp4hd2",
+            "width": 1280,
+            "transfer_mode": "http",
+            "size": 647101523,
+            "height": 720,
+            "milliseconds_video": 3161960,
+            "drm_type": "default",
+            "milliseconds_audio": 3161884,
+            "stream_fileid": "0300011100577C6077960F307C35478A6D0A42-86FC-A421-0AF6-8A70D42018BF"
+        }],
+        "dvd": {
+            "point": [{
+                "title": "原告控诉女友仪式感太强烈",
+                "desc": "",
+                "start": "158207",
+                "ctype": "story"
+            }, {
+                "title": "沈玉琳拿出奇葩证物吓懵众人",
+                "desc": "",
+                "start": "250383",
+                "ctype": "story"
+            }, {
+                "title": "曾宝仪真心面包赠对手惨被嫌弃",
+                "desc": "",
+                "start": "627389",
+                "ctype": "story"
+            }, {
+                "title": "法条君裙装上阵助演谢娜",
+                "desc": "",
+                "start": "853418",
+                "ctype": "story"
+            }, {
+                "title": "律师团发力原告反被控诉笨",
+                "desc": "",
+                "start": "1070349",
+                "ctype": "story"
+            }, {
+                "title": "傅首尔动情控诉首度哽咽",
+                "desc": "",
+                "start": "1364397",
+                "ctype": "story"
+            }, {
+                "title": "懒癌患者被控诉",
+                "desc": "",
+                "start": "1645415",
+                "ctype": "story"
+            }, {
+                "title": "沈玉琳现场示范头戴偷懒神器",
+                "desc": "",
+                "start": "2114259",
+                "ctype": "story"
+            }, {
+                "title": "曾宝仪秒变树懒行动迟缓",
+                "desc": "",
+                "start": "2280275",
+                "ctype": "story"
+            }, {
+                "title": "陪审团投票懒癌罪不成立",
+                "desc": "",
+                "start": "2820509",
+                "ctype": "story"
+            }, {
+                "title": "沈玉琳接受惩罚脸穿保鲜膜",
+                "desc": "",
+                "start": "2965291",
+                "ctype": "story"
+            }],
+            "notsharing": "0"
+        },
+        "album": {
+            "total": 6,
+            "toal_page": 1,
+            "count": 10,
+            "page": 1,
+            "owner_id": 813446471
+        },
+        "videos": {
+            "previous": {
+                "vv": 0,
+                "title": "\"康熙鬼扯王\"重出江湖舌战谢娜 160706 暴走法条君",
+                "encodevid": "XMTYzMjQxODQ4MA==",
+                "seq": "4",
+                "vid": "408104620"
+            },
+            "list": [{
+                "vv": 0,
+                "title": "曾宝仪当庭怒断懒人神器 谢娜头戴雨伞被嘲\"雷峰塔\" 160706 暴走法条君",
+                "encodevid": "XMTYzMTU2NDI4OA==",
+                "seq": "0",
+                "vid": "407891072"
+            }, {
+                "vv": 0,
+                "title": "沈玉琳自夸颜值比肩彭于晏 讽周杰伦与吴宗宪恩怨 160706 暴走法条君",
+                "encodevid": "XMTYzMTU2MjQ0MA==",
+                "seq": "1",
+                "vid": "407890610"
+            }, {
+                "vv": 0,
+                "title": "我们是一群不会审案但\"车技精湛\"的律师",
+                "encodevid": "XMTYzMDg0OTczNg==",
+                "seq": "2",
+                "vid": "407712434"
+            }, {
+                "vv": 0,
+                "title": "[预告]沈玉琳自曝肾亏\"尿尿分叉\" 法庭鬼扯遭谢娜破口大骂 160706 暴走法条君",
+                "encodevid": "XMTYzMDg0Nzk3Ng==",
+                "seq": "3",
+                "vid": "407711994"
+            }, {
+                "vv": 0,
+                "title": "\"康熙鬼扯王\"重出江湖舌战谢娜 160706 暴走法条君",
+                "encodevid": "XMTYzMjQxODQ4MA==",
+                "seq": "4",
+                "vid": "408104620"
+            }, {
+                "vv": 0,
+                "title": "如果懒有罪请判我无期 160706",
+                "encodevid": "XMTYzMjk3MzgzMg==",
+                "seq": "5",
+                "vid": "408243458"
+            }]
+        },
+        "uploader": {
+            "certification": true,
+            "fan_count": 35930,
+            "reason": "《暴走法条君》优酷官方频道",
+            "show_brand": 1,
+            "avatar": {
+                "big": "http://g2.ykimg.com/0130391F4557329CE5AC6B307C35476FDE721F-8EB1-6C72-1395-A4DF612CA1E7",
+                "small": "http://g3.ykimg.com/0130391F4557329CE69180307C354797E99E76-5634-472F-E40F-43A593695A20",
+                "middle": "http://g2.ykimg.com/0130391F4557329CE57AD0307C35474DE86C62-4715-F29C-8691-088E7A101BF9",
+                "large": "http://g1.ykimg.com/0130391F4557329CE47AA0307C3547C9DF51E9-C9C2-8899-8D7F-7268B849578D"
+            },
+            "homepage": "http://i.youku.com/u/UMzI1Mzc4NTg4NA=="
+        },
+        "show": {
+            "id": "304424",
+            "title": "如果懒有罪请判我无期 160706",
+            "video_pay": 0,
+            "video_type": 1,
+            "pay_type": [],
+            "exclusive": true,
+            "encodeid": "b479d708be7911e5b522",
+            "pay": 0,
+            "copyright": "1",
+            "stage": "20160706"
+        },
+        "security": {
+            "encrypt_string": "MgXWSQoXJrLT1fbC9+JxAYDzuhs11w/OWRs=",
+            "ip": 3395848389
+        },
+        "network": {
+            "dma_code": "4134",
+            "area_code": "440300"
+        },
+        "id": 408243458,
+        "preview": {
+            "timespan": "6000",
+            "thumb": ["http://g4.ykimg.com/05210006577C63D36F0E6642770DC119", "http://g2.ykimg.com/05210106577C63D36F0E6642770DC119", "http://g4.ykimg.com/05210206577C63D36F0E6642770DC119", "http://g2.ykimg.com/05210306577C63D36F0E6642770DC119", "http://g4.ykimg.com/05210406577C63D36F0E6642770DC119", "http://g1.ykimg.com/05210506577C63D36F0E6642770DC119"]
+        },
+        "controller": {
+            "html5_disable": true,
+            "continuous": true,
+            "video_capture": true,
+            "like_disabled": false,
+            "stream_mode": 2,
+            "download_disable": false,
+            "share_disable": false,
+            "circle": false,
+            "play_mode": 3
+        },
+        "trial": {
+            "time": "300",
+            "type": "h5"
+        },
+        "user": {
+            "uid": ""
+        },
+        "video": {
+            "tags": ["暴走法条君"],
+            "logo": "http://r4.ykimg.com/05410408577C63716A0A49045DD491B5",
+            "userid": 813446471,
+            "privacy": "anybody",
+            "category_id": 85,
+            "type": ["show", "dvd", "interact", "bullet"],
+            "upload": "import",
+            "restrict": 0,
+            "title": "如果懒有罪请判我无期 160706",
+            "username": "暴走法条君",
+            "source": 5,
+            "seconds": "3162.00",
+            "encodeid": "XMTYzMjk3MzgzMg==",
+            "category_letter_id": "v",
+            "subcategories": [{
+                "id": "3038",
+                "name": "大陆"
+            }]
+        }
+    },
+    "cost": 0.00800000037997961
+}

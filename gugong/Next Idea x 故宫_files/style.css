@@ -1,0 +1,591 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+linkcode,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  font-family: 'Helvetica Neue', 'Roboto', "microsoft yahei";
+  line-height: 1;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@-webkit-keyframes loadProcess {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-webkit-keyframes keyframeHead {
+  0% {
+    -webkit-transform: rotate(-1deg);
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+  }
+}
+@-webkit-keyframes keyframeRightHand {
+  0% {
+    -webkit-transform: rotate(-1deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+  }
+}
+@-webkit-keyframes keyframeLeftHand {
+  0% {
+    -webkit-transform: rotate(-3deg);
+  }
+  50% {
+    -webkit-transform: rotate(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(-3deg);
+  }
+}
+@-webkit-keyframes keyframeCloud {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes king {
+  /*0% {
+    background-position: 0 0;
+  }*/
+  100% {
+    background-position: -1350px 0;
+  }
+}
+@-webkit-keyframes yan {
+  /*0% {
+    background-position: 0 0;
+  }*/
+  100% {
+    background-position: -7125px 0;
+  }
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+.m-wrap {
+  position: absolute;
+  left: 50%;
+  width: 375px;
+  top: 50%;
+  height: 600px;
+  margin: -300px 0 0 -187.5px;
+}
+.m-video-box {
+  position: absolute;
+  width: 375px;
+  height: 600px;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.m-video-box.block {
+  opacity: 1;
+}
+.m-loading {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.m-loading .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;
+  height: 600px;
+  margin: -300px 0 0 -187.5px;
+  overflow: hidden;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/bg_load.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.m-loading .wrap .loading-txt {
+  margin: 262px auto;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/load_txt1.png") no-repeat;
+  -webkit-background-size: 118px 13px;
+  background-size: 118px 13px;
+  width: 118px;
+  height: 13px;
+}
+.m-loading .wrap .loading-txt.complete {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/load_txt2.png") no-repeat;
+  -webkit-background-size: 73px 13px;
+  background-size: 73px 13px;
+  width: 73px;
+}
+.m-loading .wrap .loadProcess {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -25.5px;
+  width: 53px;
+  height: 54px;
+  -webkit-animation: loadProcess 1000ms infinite;
+  animation: loadProcess 1000ms infinite;
+}
+.m-loading .wrap .loadProcess .txt-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 53px;
+  height: 54px;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/bg_load_process.png") no-repeat;
+  -webkit-background-size: 53px 54px;
+  background-size: 53px 54px;
+  /*&.txt-bg-rotate{
+                    -webkit-transform: rotate(360deg);
+                    -webkit-transition: transform 1500ms;
+                    transition: transform 1500ms;
+                }*/
+}
+.m-loading .wrap .loadProcess .txt-box {
+  color: #2d1910;
+  text-align: center;
+  width: 25px;
+  height: 23px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -11.5px 0 0 -12.5px;
+}
+.m-loading .wrap .loadProcess .txt-box .num {
+  font-size: 14px;
+  height: 14px;
+}
+.m-loading .wrap .loadProcess .txt-box .percent {
+  font-size: 11px;
+}
+.m-loading .wrap .loadProcess .txt-box .click {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/load_click.png") no-repeat;
+  width: 26px;
+  height: 11px;
+  -webkit-background-size: 26px 11px;
+  background-size: 26px 11px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -7.5px 0 0 -14px;
+  display: none;
+}
+.m-loading .wrap .music-tips {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/music_tips.png") no-repeat;
+  -webkit-background-size: 375px 20px;
+  background-size: 375px 20px;
+  width: 375px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, -20px);
+  transition: transform 300ms linear;
+  -webkit-transform: translate(0, -20px);
+  -webkit-transition: transform 300ms linear;
+}
+.m-loading .wrap .music-tips.move {
+  transform: translate(0, 0);
+  transition: transform 200ms linear;
+  -webkit-transform: translate(0, 0);
+  -webkit-transition: transform 200ms linear;
+}
+.m-index {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 1;
+}
+.m-index .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;
+  height: 600px;
+  margin: -300px 0 0 -187.5px;
+  overflow: hidden;
+}
+.m-index .index-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.m-index.index-hide {
+  opacity: 0;
+  transition: opacity 50ms linear;
+  -webkit-transition: opacity 50ms linear;
+}
+.m-end {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.m-end .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;
+  height: 600px;
+  margin: -300px 0 0 -187.5px;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/bg_end.jpg") no-repeat;
+  -webkit-background-size: 375px 600px;
+  background-size: 375px 600px;
+  overflow: hidden;
+}
+.m-end .wrap .logo {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/logo.png") no-repeat;
+  width: 124px;
+  height: 38px;
+  -webkit-background-size: 124px 38px;
+  background-size: 124px 38px;
+  position: absolute;
+  left: 50%;
+  margin-left: -57px;
+  top: 32px;
+  z-index: 999;
+}
+.m-end .wrap .cloud .cloud-left {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_cloud_left.png") no-repeat;
+  width: 127px;
+  height: 59px;
+  -webkit-background-size: 127px 59px;
+  background-size: 127px 59px;
+  position: absolute;
+  top: 53px;
+  left: 6px;
+}
+.m-end .wrap .cloud .cloud-right {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_cloud_right.png") no-repeat;
+  width: 89px;
+  height: 52px;
+  -webkit-background-size: 89px 52px;
+  background-size: 89px 52px;
+  position: absolute;
+  top: 39px;
+  right: 60px;
+}
+.m-end .wrap .cloud.cloud-move {
+  animation: keyframeCloud 100s infinite linear;
+  -webkit-animation: keyframeCloud 100s infinite linear;
+}
+.m-end .wrap .king {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 215px;
+  height: 347px;
+}
+.m-end .wrap .king .body {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_body.png") no-repeat right;
+  width: 183px;
+  height: 285px;
+  -webkit-background-size: 183px 285px;
+  background-size: 183px 285px;
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+}
+.m-end .wrap .king .head {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_head.png") no-repeat right;
+  width: 120px;
+  height: 160px;
+  -webkit-background-size: 120px 160px;
+  background-size: 120px 160px;
+  position: absolute;
+  right: -8px;
+  top: -18px;
+  transform-origin: center center;
+  -webkit-animation: keyframeHead 2000ms infinite;
+}
+.m-end .wrap .king .hand-left {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_hand_left.png") no-repeat;
+  width: 157px;
+  height: 151px;
+  -webkit-background-size: 157px 151px;
+  background-size: 157px 151px;
+  position: absolute;
+  right: -77px;
+  top: 101px;
+  transform-origin: bottom right;
+  -webkit-animation: keyframeLeftHand 1250ms infinite;
+}
+.m-end .wrap .king .hand-right {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_hand_right.png") no-repeat;
+  width: 117px;
+  height: 161px;
+  -webkit-background-size: 117px 161px;
+  background-size: 117px 161px;
+  position: absolute;
+  left: -5px;
+  top: 60px;
+  transform-origin: bottom right;
+  -webkit-animation: keyframeRightHand 1500ms infinite;
+}
+.m-end .wrap .king.king-fly {
+  -webkit-transform: translate(100%);
+  transform: translate(100%);
+  -webkit-transition: transform 350ms linear;
+}
+.m-end .wrap .btn-box {
+  position: absolute;
+  bottom: 87px;
+  width: 281px;
+  height: 37px;
+  left: 50%;
+  margin-left: -138.5px;
+  z-index: 999;
+}
+.m-end .wrap .btn-box .btn-in {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_btn_in.png") no-repeat;
+  width: 128px;
+  height: 37px;
+  -webkit-background-size: 128px 37px;
+  background-size: 128px 37px;
+  float: right;
+}
+.m-end .wrap .btn-box .btn-share1 {
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/end_btn_share.png") no-repeat;
+  width: 128px;
+  height: 37px;
+  -webkit-background-size: 128px 37px;
+  background-size: 128px 37px;
+  float: left;
+}
+.m-end .float-wrap {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 375px;
+  height: 600px;
+  margin: -300px 0 0 -187.5px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  -webkit-animation: king 1100ms steps(6) infinite;
+}
+.m-end .float-wrap .f-king {
+  position: absolute;
+  right: -70px;
+  width: 225px;
+  height: 270px;
+  -webkit-transform: translateY(230%);
+  transform: translateY(230%);
+  z-index: 2;
+}
+.m-end .float-wrap .f-king .f-body {
+  width: 225px;
+  height: 270px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/sprite_king.png") no-repeat;
+  -webkit-background-size: 1575px 270px;
+  background-size: 1575px 270px;
+  -webkit-animation: king 1100ms steps(6) infinite;
+  animation: king 1100ms steps(6) infinite;
+}
+.m-end .float-wrap .f-king .f-head {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  margin-left: -42px;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/float_head.png") no-repeat;
+  width: 42px;
+  height: 56px;
+  -webkit-background-size: 42px 56px;
+  background-size: 42px 56px;
+  transform-origin: center center;
+  -webkit-animation: keyframeHead 2000ms infinite;
+}
+.m-end .float-wrap .f-king .f-hand-left {
+  position: absolute;
+  top: 1px;
+  right: 75px;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/float_hand_left.png") no-repeat;
+  width: 31px;
+  height: 70px;
+  -webkit-background-size: 31px 70px;
+  background-size: 31px 70px;
+  transform-origin: bottom right;
+  -webkit-animation: keyframeLeftHand 1000ms infinite;
+}
+.m-end .float-wrap .f-king .f-hand-right {
+  position: absolute;
+  top: 50px;
+  left: 38px;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/float_hand_right.png") no-repeat;
+  width: 30px;
+  height: 58px;
+  -webkit-background-size: 30px 58px;
+  background-size: 30px 58px;
+  transform-origin: bottom right;
+  -webkit-animation: keyframeRightHand 1500ms infinite;
+}
+.m-end .float-wrap .f-king.f-king-fly {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 500ms ease-out;
+}
+.m-end .float-wrap .f-yan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://7xvl2z.com1.z0.glb.clouddn.com/sprite_yan.png") no-repeat;
+  -webkit-background-size: 7500px 600px;
+  background-size: 7500px 600px;
+  -webkit-animation: yan 3s steps(19) 1 200ms;
+  z-index: 1;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>录取通知书</title>
+    <link rel="stylesheet" type="text/css" href="/index.css">
+</head>
+<body>
+<div id="container">
+    <div id="section1" class="section">
+        <div class="message message1">
+            <p class="p1">你的姓名</p>
+            <input id="name" class="i1" type="text" placeholder="请输入名字（中文/英文）">
+            <p class="p1">入学年份</p>
+            <input id="year" class="i1" type="text" placeholder="请输入年份（如2016）">
+        </div>
+        <div class="message message2">
+            <button id="create">生成录取通知书</button>
+        </div>
+        <div class="peo1">
+            <img src="/u1.jpg">
+        </div>
+        <div class="desc">
+            <p>游戏说明：</p>
+            <ul>
+                <li>1.填写上方简要信息</li>
+                <li>2.点击"生成录取通知书"</li>
+                <li>3.查看自己入读的学校</li>
+            </ul>
+        </div>
+    </div>
+    <div id="section2" class="section disnone">
+        <p class="tcenter">恭喜你入读</p>
+        <p class="tcenter">“<span class="school">少林寺</span>”</p>
+        <p class="tcenter longan">长按图片保存后可发送到朋友圈</p>
+        <div class="message message4">
+            <img src="/u2.jpg">
+        </div>
+        <div class="message message3">
+            <button id="change">更换学校</button>
+        </div>
+        <div class="message message3">
+            <button id="share">分享好友</button>
+        </div>
+        <div class="peo2">
+            <img src="/u2.png">
+        </div>
+    </div>
+    <div id="section3" class="section disnone">
+        <p class="tcenter p3">长按识别二维码，关注“前端小窗”</p>
+        <p class="tcenter p4">立即查看自己即将入读的大学</p>
+        <div class="message message5">
+            <img src="/logo.jpg">
+        </div>
+    </div>
+    <div id="section4" class="section disnone">
+        <ul class="school-ul">
+            <li class="school-li"><button class="school-button" data-school="北京大学">北京大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中央美术学院">中央美术学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="南京大学">南京大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国石油大学">中国石油大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京协和医学院">北京协和医学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="山东大学">山东大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="哈尔滨工业大学">哈尔滨工业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京航空航天大学">北京航空航天大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中南大学">中南大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="西安建筑科技大学">西安建筑科技大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京交通大学">北京交通大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="国防大学">国防大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国地质大学">中国地质大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中央音乐学院">中央音乐学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="天津科技大学">天津科技大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="青岛科技大学">青岛科技大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="四川大学">四川大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="清华大学">清华大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="南京林业大学">南京林业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="景德镇陶瓷学院">景德镇陶瓷学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="湖南工业大学">湖南工业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="东华大学">东华大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="天津工业大学">天津工业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京服装学院">北京服装学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="苏州大学">苏州大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="武汉纺织大学">武汉纺织大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京体育学院">北京体育学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国农业大学">中国农业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="华南理工大学">华南理工大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="华中农业大学">华中农业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="西安理工大学">西安理工大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="江南大学">江南大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="云南农业大学">云南农业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国传媒大学">中国传媒大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国人民大学">中国人民大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="同济大学">同济大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京邮电大学">北京邮电大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="对外经济贸易大学">对外经济贸易大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="上海交通大学">上海交通大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京师范大学">北京师范大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="电子科技大学">电子科技大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="新东方烹饪学校">新东方烹饪学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="北京林业大学">北京林业大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国政法大学">中国政法大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="股票大学">股票大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="中国佛学院">中国佛学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="清洁工大学">清洁工大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="女神学校">女神学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="拆迁大学">拆迁大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="蓝翔高级技工学校">蓝翔高级技工学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="暴风城联盟大学">暴风城联盟大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="复仇者联盟大学">复仇者联盟大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="钉子户大学">钉子户大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="保镖学校">保镖学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="奥格瑞玛部落大学">奥格瑞玛部落大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="好莱坞电影大学">好莱坞电影大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="屌丝培训学校">屌丝培训学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="北方汽车专修学校">北方汽车专修学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="少林寺">少林寺</button></li>
+            <li class="school-li"><button class="school-button" data-school="淑女培训学校">淑女培训学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="猛男培训学校">猛男培训学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="万通汽修学院">万通汽修学院</button></li>
+            <li class="school-li"><button class="school-button" data-school="睡懒觉大学">睡懒觉大学</button></li>
+            <li class="school-li"><button class="school-button" data-school="新华电脑学校">新华电脑学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="福建西山文武学校">福建西山文武学校</button></li>
+            <li class="school-li"><button class="school-button" data-school="前端科技大学">前端科技大学</button></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/index.js"></script>
+</body>
+</html>

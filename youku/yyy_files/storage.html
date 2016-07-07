@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://static.youku.com/v1.0.1083/x/js/storage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>nothing here</title>
+<script>
+document.domain = 'youku.com';
+
+(function(){
+
+	if (!(window.postMessage && window.JSON && window.localStorage)) {
+		return;
+	}
+	
+	//allowed domains
+	var whitelist = ['youku.com'];
+	function verifyOrigin(origin) {
+		var domain = origin.replace(/^https?:\/\/|:\d{1,4}$/g, "").toLowerCase(),
+			i = 0,
+			len = whitelist.length;
+
+		if (/(^|\.)youku\.com$/.test(origin)) {
+			domain = 'youku.com';
+		}
+
+		while (i < len) {
+			if (whitelist[i] == domain){
+				return true;
+			}
+			i++;
+		}
+
+		return false;
+	}
+
+	function handleRequest(event) {
+		if (!verifyOrigin(event.origin)){
+			return;
+		}
+
+		var data = JSON.parse(event.data);
+		var key = data.key;
+		var val = data.val;
+
+		if (typeof val === "undefined") {
+			val = localStorage.getItem(key);
+			event.source.postMessage(JSON.stringify({id : data.id, key : key, val : val}), event.origin);
+		} else if (val === false || val === null) {
+			localStorage.removeItem(key);
+		} else {
+			localStorage.setItem(key, val);
+		}
+	}
+
+	if (window.addEventListener) {
+		window.addEventListener("message", handleRequest, false);
+	} else if (window.attachEvent) {
+		window.attachEvent("onmessage", handleRequest);
+	}
+	
+	var loginKey = 'yktk';
+	function ckie(name, value, options) {
+		if (typeof value != 'undefined') {
+			options = options || {};
+			if (value === null) {
+				value = '';
+				options.expires = -1;
+			}
+			var expires = '';
+			if (options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+				var date;
+				if (typeof options.expires == 'number') {
+					date = new Date();
+					date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+				} else {
+					date = options.expires;
+				}
+				expires = '; expires=' + date.toUTCString();
+			}
+			var path = options.path ? '; path=' + (options.path) : '';
+			var domain = options.domain ? '; domain=' + (options.domain) : '';
+			var secure = options.secure ? '; secure' : '';
+			document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+			} else {
+				var cookieValue = null;
+				if (document.cookie && document.cookie != '') {
+				var cookies = document.cookie.split(';');
+				for (var i = 0; i < cookies.length; i++) {
+					var cookie = cookies[i].trim();
+					if (cookie.substring(0, name.length + 1) == (name + '=')) {
+						try{
+							cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						}catch(ex){
+							cookieValue = "";
+						}
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+	}
+
+	function handleLoginStatus(){
+		var yktk = ckie(loginKey) || "";
+		if(yktk != "" && navigator.userAgent.indexOf("MicroMessenge") !== -1){
+			localStorage.setItem(loginKey, yktk);
+		}else{
+			var lsYktk = localStorage.getItem(loginKey) || "";
+			if(lsYktk != '' && yktk == ''){
+				ckie(loginKey, lsYktk, {"domain":"youku.com", "expires":360, "path":"/"});
+				window.parent.MHeader.init();
+			}
+		}
+	}	
+	handleLoginStatus();	
+	var origin = location.href;
+	top.window.onuserlogin = function(event){
+		if(navigator.userAgent.indexOf("MicroMessenge") !== -1){
+			//将yktk记录至localstorage
+			try{
+				window.postMessage(JSON.stringify({id : 1, key : 'yktk', val : decodeURIComponent(ckie("yktk")) }), origin);
+			}catch(ex){}
+		}
+	}
+	top.window.onuserlogout = function(event){
+		//将localstorage中的yktk删除
+		try{
+			window.postMessage(JSON.stringify({id : 1, key : 'yktk', val : null}), origin);
+		}catch(ex){}
+
+	}
+})();
+</script>
+</head><body></body></html>
